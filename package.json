@@ -6,9 +6,7 @@
   "author": "",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "devDependencies": {
     "@netlify/functions": "^3.0.4",
     "@types/express": "^5.0.1",
