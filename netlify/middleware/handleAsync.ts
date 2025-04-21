@@ -92,12 +92,21 @@ type FinalSendFunc = ({
   message?: string;
 }) => void;
 
-type RunnerFunc = (request: Request, finalSend: FinalSendFunc) => Promise<void>;
+type RunnerFunc = (
+  request: Request,
+  finalSend: FinalSendFunc,
+  next: NextFunction
+) => Promise<void>;
 
 export function runner(func: RunnerFunc, options?: AsyncWrapperOptions) {
-  return asyncWrapper(async (req: Request, res: Response) => {
-    return func(req, ({ status, data, message }) =>
-      send({ res, status, data, message })
-    );
-  }, options);
+  return asyncWrapper(
+    async (req: Request, res: Response, next: NextFunction) => {
+      return func(
+        req,
+        ({ status, data, message }) => send({ res, status, data, message }),
+        next
+      );
+    },
+    options
+  );
 }

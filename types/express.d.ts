@@ -1,9 +1,10 @@
-import { drizzle } from "drizzle-orm/libsql";
+import "express";
+import db from "../netlify/db";
 
 declare global {
   namespace Express {
     interface Request {
-      db: drizzle;
+      db: typeof db;
     }
   }
 }
