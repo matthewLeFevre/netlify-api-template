@@ -5,7 +5,8 @@
     "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "."
   },
-  "include": ["netlify/functions"]
+  "include": ["netlify/functions", "types"]
 }
