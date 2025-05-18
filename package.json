@@ -1,6 +1,6 @@
 {
   "name": "netlify-api-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "license": "ISC",
   "author": "",
@@ -25,7 +25,7 @@
     "@libsql/client": "^0.10.0",
     "cors": "^2.8.5",
     "drizzle-orm": "^0.42.0",
-    "express": "^5.1.0",
+    "express": "^4.21.2",
     "nanoid": "^5.1.5",
     "serverless-http": "^3.2.0",
     "zod": "^3.24.3"
