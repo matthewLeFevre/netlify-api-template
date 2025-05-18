@@ -63,7 +63,7 @@ function send(payload: SendInterface) {
     payload?.status !== 400 &&
     payload?.message !== "Errors found"
   ) {
-    if (!(payload.data != null && payload.data.constructor.name === "Object"))
+    if (!(payload.data != null))
       throw new CustomError("TypeError", "Data should be a valid object", 400);
   }
   const { res, status = 200, data, message } = payload;
